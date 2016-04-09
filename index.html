@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Distathon 2 Donation Tracker</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.animateNumber.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<style>
+	body {
+  
+}
+	</style>
+</head>
+<body style="background: #000 url(assets/distabgb.jpg) no-repeat fixed top left;">
+
+<a href="http://www.distathon.com/"><img src="assets/siteheader.png" class="headimg"></a>
+
+	<div class="container">
+	<div class="header">
+      </div>
+
+      <div class="jumbotron">
+        <h1>$<span id="donation-total">0</span></h1>
+        <p style="color: #888888" class="lead">raised for Child's Play charity. (<span id="contributions">0</span> donations)</p>
+        <p><a class="btn btn-lg btn-success" href="https://donate.childsplaycharity.org/eff5e9ca13c95ce285babe5f60355d21/" role="button">Donate</a></p>
+      </div>
+	  
+	  <div class="footer">
+        <p style="color: #aaaaaa">Homepage: <a href="http://www.distathon.com/">http://www.distathon.com/</a> | Livestream: <a href="https://www.twitch.tv/fork_h">https://www.twitch.tv/fork_h</a></p>
+      </div>
+	  
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		function updateAmount() {
+			$.ajax({
+	                type: "GET",
+					//url: "https://donate.childsplaycharity.org/api/event/8a1ee3ee3bbe5acfa0d295af5d257bcb/json",
+	                url: "https://donate.childsplaycharity.org/api/event/eff5e9ca13c95ce285babe5f60355d21/json",
+	                success: function (data) {
+	                	var cs = $.animateNumber.numberStepFactories.separator(',');
+
+	                	$("#donation-total").animateNumber(
+							{
+							number: data.total,
+							numberStep: cs
+							}
+						);
+
+						$("#contributions").animateNumber(
+							{
+							number: data.contributions,
+							numberStep: cs
+							}
+						);
+	      
+        }
+	    });
+
+			setTimeout(updateAmount, 60000);
+		}
+
+		updateAmount();
+
+
+});
+</script>
+</body>
+</html>
