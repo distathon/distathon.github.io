@@ -97,3 +97,70 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+#countbox,#countbox2 {
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}
+#countbox2 {
+	padding-top: 5px;
+	margin-bottom: 5px;
+}
+
+/*#countbox a {
+	text-align: center;
+	border: none;
+    padding: 10px 32px;
+	color: white;
+	background-color: #555;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+}
+
+#countbox a:hover {
+	text-align: center;
+	border: none;
+    padding: 10px 32px;
+	color: white;
+	background-color: #555;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+}*/
+
+#countbox a {
+    background-color: #9f0000;
+    border: none;
+	border-radius: 10px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#countbox a:hover {
+	background-color: #555;
+}
+#countbox2 a {
+    background-color: #555;
+    border: none;
+	border-radius: 10px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#countbox2 a:hover {
+	background-color: #444;
+}
