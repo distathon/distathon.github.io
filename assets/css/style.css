@@ -13,9 +13,10 @@ body {
 }
 
 /* Custom page header */
-.header {
+/*.header {
   border-bottom: 1px solid #e5e5e5;
-}
+}*/
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
@@ -26,9 +27,9 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
+  /*padding-top: 19px;*/
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  /*border-top: 1px solid #e5e5e5;*/
 }
 
 /* Customize container */
@@ -37,7 +38,7 @@ body {
     max-width: 730px;
   }
 }
-.container-narrow > hr {
+.container-narrow > hr {28px1
   margin: 30px 0;
 }
 
@@ -49,6 +50,7 @@ body {
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
+  border: 2px solid green;
 }
 
 /* Supporting marketing content */
@@ -69,7 +71,7 @@ body {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
@@ -93,9 +95,13 @@ h1 {
 .headimg {
 	max-width: 100%;
 	height: auto;
-	display: block;
+	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.head {
+	text-align: center;
 }
 
 #countbox,#countbox2 {
@@ -132,7 +138,7 @@ h1 {
 
 #countbox a {
     background-color: #9f0000;
-    border: none;
+    border: 2px solid maroon;
 	border-radius: 10px;
     color: white;
     padding: 8px 20px;
@@ -145,11 +151,11 @@ h1 {
     cursor: pointer;
 }
 #countbox a:hover {
-	background-color: #555;
+	background-color: #d00;
 }
 #countbox2 a {
     background-color: #555;
-    border: none;
+    border: 2px solid grey;
 	border-radius: 10px;
     color: white;
     padding: 8px 20px;
@@ -163,4 +169,26 @@ h1 {
 }
 #countbox2 a:hover {
 	background-color: #444;
+}
+
+#watch {
+	display: inline-block;
+}
+
+#watch a {
+    background-color: #9f0000;
+    border: none;
+	border-radius: 10px;
+    color: white;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 21px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#watch a:hover {
+	background-color: #d00;
 }

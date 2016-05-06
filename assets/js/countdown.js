@@ -14,9 +14,20 @@ function GetCount(){
 
         // time is already past
         if(amount < 0){
-			var str = "Distathon is live!";
+			//button above timer
+			var str = "Watch Stream";
 			var result = str.link("https://www.twitch.tv/fork_h");
 			document.getElementById('countbox').innerHTML = result;
+			
+			//button inside jumbotron
+			/*var watchhere = "Watch Stream";
+			var results = watchhere.link("https://www.twitch.tv/fork_h");
+			var att = document.createAttribute("class");
+			att.value = "btn";
+			var watch = document.getElementById('watch');
+			watch.setAttributeNode(att);
+			document.getElementById('watch').innerHTML = results*/
+			
 			GetDown(); //start second countdown
         }
         // date is still good
@@ -78,7 +89,7 @@ function GetDown(){ //second countdown
 		if(days != 0 || hours != 0){out += hours +" hour"+((hours!=1)?"s":"")+", ";}
 		if(days != 0 || hours != 0 || mins != 0){out += mins +" minute"+((mins!=1)?"s":"")+", ";}
 		out += secs +" seconds";
-		document.getElementById('countbox2').innerHTML="Time remaining:<br/>"+out;
+		document.getElementById('countbox2').innerHTML="Distathon is live! Time remaining:<br/>"+out;
 
 		setTimeout("GetDown()", 1000);
 	}
