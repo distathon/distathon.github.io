@@ -3,13 +3,13 @@ $(document).ready(function() {
 		function updateAmount() {
 			$.getJSON('https://donate.childsplaycharity.org/api/event/eff5e9ca13c95ce285babe5f60355d21/json', function(data) {
 				$('#donation-total').numerator({
-					duration: 3000,
+					duration: 2000,
 					delimiter: ',',
 					rounding: 2,
 					toValue: data.total
 				});
 				$('#contributions').numerator({
-					duration: 3000,
+					duration: 2000,
 					delimiter: ',',
 					toValue: data.contributions
 				});
