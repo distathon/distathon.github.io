@@ -7,6 +7,7 @@ $(document).ready(function() {
 				$('#donation-total').numerator({
 					duration: 2000,
 					rounding: 2,
+					//delimiter: ',',
 					toValue: data.total
 				});
 				$('#contributions').numerator({
