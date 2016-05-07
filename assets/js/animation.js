@@ -8,6 +8,7 @@ $(document).ready(function() {
 					duration: 2000,
 					delimiter: ',',
 					rounding: 2,
+					//delimiter: ',',
 					toValue: data.total
 				});
 				$('#contributions').numerator({
