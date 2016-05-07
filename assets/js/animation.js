@@ -6,6 +6,7 @@ $(document).ready(function() {
 				if (donationTotal != data.total){
 				$('#donation-total').numerator({
 					duration: 2000,
+					delimiter: ',',
 					rounding: 2,
 					toValue: data.total
 				});
