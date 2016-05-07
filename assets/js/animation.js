@@ -1,7 +1,9 @@
 $(document).ready(function() {
-	
+	var donationTotal = 0;
 		function updateAmount() {
 			$.getJSON('https://donate.childsplaycharity.org/api/event/eff5e9ca13c95ce285babe5f60355d21/json', function(data) {
+				
+				if (donationTotal != data.total){
 				$('#donation-total').numerator({
 					duration: 2000,
 					delimiter: ',',
@@ -10,11 +12,14 @@ $(document).ready(function() {
 				});
 				$('#contributions').numerator({
 					duration: 2000,
-					delimiter: ',',
+					//delimiter: ',',
 					toValue: data.contributions
 				});
+				donationTotal = data.total;
+				}
 			});
 				setTimeout(updateAmount, 5000);
+				document.getElementById('donation-amount').innerHTML="$";
 			}
 			updateAmount();
 	

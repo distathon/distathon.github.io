@@ -192,3 +192,14 @@ h1 {
 #watch a:hover {
 	background-color: #d00;
 }
+
+#donation-amount {
+	display: inline;
+}
+
+@media screen and (min-width: 768px) {
+    .container .jumbotron {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+}
