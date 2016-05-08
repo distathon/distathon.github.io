@@ -65,7 +65,7 @@ function GetDown(){ //second countdown
 	if(amount2 < 0){
 		document.getElementById('countbox').innerHTML = null; //remove live button
 		str = "Distathon is over!";
-		result = str.link("https://www.distathon.com");
+		result = str.link("http://www.distathon.com");
 		document.getElementById('countbox2').innerHTML = result; //insert finished button
 	}
 	
